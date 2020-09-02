@@ -1,0 +1,88 @@
+{
+  "name": "MedicalPractitioner",
+  "fields": [
+    {
+      "fieldName": "practitionerType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "specialty",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "registrationNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "employmentMode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "qualification",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "personIdRef",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "category",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "position",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "whatsappNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "language1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "language2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "vehicleExist",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "assignment",
+      "otherEntityRelationshipName": "medicalPractitioner",
+      "relationshipName": "assignment"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "practitionerSchedule",
+      "otherEntityRelationshipName": "medicalPractitioner",
+      "relationshipName": "practitionerSchedule"
+    }
+  ],
+  "changelogDate": "20200902081545",
+  "entityTableName": "medical_practitioner",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "springBatch",
+  "applications": "*",
+  "microserviceName": "springBatch",
+  "enableEntityAudit": true
+}

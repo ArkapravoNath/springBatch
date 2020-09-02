@@ -1,0 +1,66 @@
+{
+  "name": "TicketAction",
+  "fields": [
+    {
+      "fieldName": "actionName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "actions",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "actionTakenByRef",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "category",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "subcategory",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idleTime",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "idleTimeMeasureType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "comment",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "closureStatus",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "assignment",
+      "otherEntityRelationshipName": "ticketAction",
+      "relationshipName": "assignment"
+    }
+  ],
+  "changelogDate": "20200902081745",
+  "entityTableName": "ticket_action",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "springBatch",
+  "applications": "*",
+  "microserviceName": "springBatch",
+  "enableEntityAudit": true
+}

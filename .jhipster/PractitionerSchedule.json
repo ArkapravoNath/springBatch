@@ -1,0 +1,59 @@
+{
+  "name": "PractitionerSchedule",
+  "fields": [
+    {
+      "fieldName": "typeOfSchedule",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "startDateTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "endDateTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "shiftType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "scheduleDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "scheduleStartTime",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "scheduleEndTime",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "medicalPractitioner",
+      "otherEntityRelationshipName": "practitionerSchedule",
+      "relationshipName": "medicalPractitioner",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200902081645",
+  "entityTableName": "practitioner_schedule",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "springBatch",
+  "applications": "*",
+  "microserviceName": "springBatch",
+  "enableEntityAudit": true
+}

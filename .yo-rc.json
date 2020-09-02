@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.gok"
+    },
+    "jhipsterVersion": "6.10.1",
+    "applicationType": "microservice",
+    "baseName": "springBatch",
+    "packageName": "com.gok",
+    "packageFolder": "com/gok",
+    "serverPort": "8040",
+    "authenticationType": "oauth2",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "YTJjODJhODBlMTNmMjlkZGY4MWFhY2Q2ZDI5ZGE4OTY2N2VhYzkwOTY4ZmZiMWEzN2NiZTAxZjE5OWQ0YjBhZmZkNThjZjkwODAyZGFlYTZiMzUxYjEzMTQwZGViYjc3OWZlMTdlZTFlMjBhNTdiYTVjM2NiMjQ1MmEyN2ZhNzc=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1599033917395,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  },
+  "generator-jhipster-entity-audit": {
+    "auditFramework": "custom",
+    "auditPage": true,
+    "lastLiquibaseTimestamp": 1599034830000
+  }
+}

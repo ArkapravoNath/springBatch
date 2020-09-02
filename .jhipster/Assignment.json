@@ -1,0 +1,42 @@
+{
+  "name": "Assignment",
+  "fields": [
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "assigneeId",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "ticketAction",
+      "otherEntityRelationshipName": "assignment",
+      "relationshipName": "ticketAction",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "medicalPractitioner",
+      "otherEntityRelationshipName": "assignment",
+      "relationshipName": "medicalPractitioner",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200902081845",
+  "entityTableName": "assignment",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "springBatch",
+  "applications": "*",
+  "microserviceName": "springBatch",
+  "enableEntityAudit": true
+}

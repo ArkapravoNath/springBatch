@@ -1,0 +1,55 @@
+
+entity MedicalPractitioner{
+	practitionerType String, //Nurse, Doctor, Ayurveda
+	specialty String, //Neurologist, Pulmonologist
+	registrationNumber String, 
+	employmentMode String, //<Gov, Private, Both>
+	qualification String,
+	status String,
+    personIdRef Long
+    category String,
+    position String,
+    whatsappNumber String,
+    email String,
+    language1 String,
+    language2 String,
+    vehicleExist String //or Boolean
+}
+entity PractitionerSchedule{
+typeOfSchedule String, // Doctor, Nurse, Health worker
+startDateTime Instant,
+endDateTime Instant,
+shiftType String,
+status String,
+scheduleDate Instant,
+scheduleStartTime Integer,
+scheduleEndTime Integer
+}
+
+entity TicketAction{
+	actionName String,
+    status String,
+	actions String,
+	actionTakenByRef Long,
+    category String,
+    subcategory String,
+    idleTime Integer,
+    idleTimeMeasureType String,
+    comment String,
+    closureStatus String
+}
+entity Assignment{
+	status String,
+	assigneeId String
+}
+relationship OneToMany { 
+  TicketAction to Assignment
+  MedicalPractitioner to Assignment
+  MedicalPractitioner to PractitionerSchedule
+ 
+}
+// Set pagination options
+paginate all with pagination
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+service all with serviceImpl
